@@ -13,7 +13,7 @@ class ActivityIndicator: UIActivityIndicatorView {
         super.init(frame: CGRect.zero)
         style = .medium
         hidesWhenStopped = true
-        color = .systemBlue
+        color = .accent
         startAnimating()
     }
 

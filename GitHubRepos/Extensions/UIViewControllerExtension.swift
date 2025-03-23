@@ -13,7 +13,7 @@ extension UIViewController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: buttonTitle, style: .default, handler: handler)
-        okAction.setValue(UIColor.systemBlue, forKey: "titleTextColor")
+        okAction.setValue(UIColor.accent, forKey: "titleTextColor")
         okAction.accessibilityIdentifier = "Ok alert action"
         alertController.addAction(okAction)
         
@@ -24,12 +24,12 @@ extension UIViewController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
 
         let cancelAction = UIAlertAction(title: leftButtonText, style: .cancel, handler: cancelHandler)
-        cancelAction.setValue(UIColor.systemBlue, forKey: "titleTextColor")
+        cancelAction.setValue(UIColor.accent, forKey: "titleTextColor")
         cancelAction.accessibilityIdentifier = "Cancel alert action"
         alertController.addAction(cancelAction)
         
         let defaultAction = UIAlertAction(title: rightButtonText, style: .default, handler: actionHandler)
-        defaultAction.setValue(UIColor.systemBlue, forKey: "titleTextColor")
+        defaultAction.setValue(UIColor.accent, forKey: "titleTextColor")
         defaultAction.accessibilityIdentifier = "Retry alert action"
         alertController.addAction(defaultAction)
         

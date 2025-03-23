@@ -10,7 +10,7 @@ import UIKit
 class SingleRepoCellModel: SingleRepoCellProtocol {
     var title: String
     var titleFont: UIFont = .systemFont(ofSize: 17, weight: .bold)
-    var titleColor: UIColor = .systemBlue
+    var titleColor: UIColor = .accent
     
     var description: String
     var descriptionFont: UIFont = .systemFont(ofSize: 14)

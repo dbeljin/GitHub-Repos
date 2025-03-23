@@ -23,7 +23,7 @@ extension TagTextCellProtocol {
         return .systemFont(ofSize: 17, weight: .bold)
     }
     var titleColor: UIColor {
-        return .darkText
+        return .accent
     }
     var descriptionFont: UIFont {
         return .systemFont(ofSize: 12, weight: .light)
