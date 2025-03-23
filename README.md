@@ -1,2 +1,2 @@
 # GitHub-Search
-This is simple GitHub wrapper for searching user public repositories
+This is a simple GitHub wrapper for browsing a user's public repos and showing repo tags.
