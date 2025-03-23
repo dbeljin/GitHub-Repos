@@ -69,13 +69,13 @@ class RepoListTableViewModel: RepoListTableViewProtocol {
     
     private func getEmptyCell(for indexPath: IndexPath) -> SimpleTextTableViewCell {
         let emptyCell: SimpleTextTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        emptyCell.configure(using: SimpleTextCellModel())
+        emptyCell.configure(using: EmptyRepoListCellModel())
         return emptyCell
     }
     
     private func stopAnimationAndReloadDataAfterFetching() {
-        self.activityIndicator.stopAnimating()
-        self.uiObserver?.reloadData()
+        activityIndicator.stopAnimating()
+        uiObserver?.reloadData()
     }
     
     private func fetchData() {

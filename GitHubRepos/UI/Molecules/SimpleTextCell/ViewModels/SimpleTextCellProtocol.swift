@@ -13,6 +13,8 @@ protocol SimpleTextCellProtocol {
     var color: UIColor { get }
 }
 
+//This default implementation exists to support reusability of the cell
+//protocol, allowing the cell to be fully customizable if needed.
 extension SimpleTextCellProtocol {
     var font: UIFont {
         return .systemFont(ofSize: 15, weight: .light)

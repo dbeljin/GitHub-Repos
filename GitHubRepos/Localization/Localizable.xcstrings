@@ -18,7 +18,7 @@
         }
       }
     },
-    "EmptyListMessage" : {
+    "EmptyRepoListMessage" : {
       "extractionState" : "manual",
       "localizations" : {
         "de" : {
@@ -31,6 +31,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sorry but there is no public repository available for this user."
+          }
+        }
+      }
+    },
+    "EmptyTagListMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Tags in diesem Repository"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No tags at this repository"
           }
         }
       }
@@ -106,13 +123,13 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Offene Probleme %d"
+            "value" : "Offene Probleme: %d"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Open issues %d"
+            "value" : "Open issues: %d"
           }
         }
       }
@@ -164,6 +181,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Retry"
+          }
+        }
+      }
+    },
+    "TagListTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ tags"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ tags"
           }
         }
       }

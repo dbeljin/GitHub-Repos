@@ -10,6 +10,8 @@ struct Repository: Codable {
     let name: String
     let description: String?
     let openIssuesCount: Int?
+    let watchersCount: Int?
+    let forksCount: Int?
     let owner: Owner?
     
     public func getUsername() -> String {

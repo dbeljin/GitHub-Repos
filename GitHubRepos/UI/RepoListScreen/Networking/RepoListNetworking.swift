@@ -15,7 +15,7 @@ class RepoListNetworking: RepoListNetworkingProtocol {
     
     private func getReposUrl(for username: String) -> String {
         let baseUrl = Constants.getBaseUrl()
-        let userRepo = String(format: Constants.userRepos, username)
+        let userRepo = String(format: Constants.userReposEndpoint, username)
         return baseUrl + userRepo
     }
 }

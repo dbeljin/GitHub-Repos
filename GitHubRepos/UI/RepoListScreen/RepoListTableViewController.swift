@@ -61,7 +61,8 @@ extension RepoListTableViewController: RepoListUIObserver {
     }
     
     func openRepo(_ repo: Repository) {
-        //TODO: Go to next page and fetch that repo
-        print(repo.name)
+        let repoTagsController = RepoTagsTableViewController()
+        repoTagsController.viewModel = RepoTagsTableViewModel(with: repo)
+        navigationController?.pushViewController(repoTagsController, animated: true)
     }
 }
