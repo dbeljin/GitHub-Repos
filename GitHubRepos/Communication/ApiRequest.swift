@@ -33,14 +33,20 @@ class ApiRequest {
         urlRequest.timeoutInterval = Constants.timeoutInterval
         AF.request(urlRequest).responseData { response in
             guard let data = response.data, let decodedResponse = data.decode(T.self) else {
-                let error = ErrorMessage.getDefaultError(with: response.error?.localizedDescription)
-
-                completion(nil, error)
+                completion(nil, getErrorMessage(from: response))
                 return
             }
             completion(decodedResponse, nil)
         }
         .validate(statusCode: 200..<300)
         .validate(contentType: ["application/json"])
+    }
+    
+    private static func getErrorMessage(from response: AFDataResponse<Data>) -> ErrorMessage? {
+        let responseError: String? = response.error?.localizedDescription
+        let gitHubError: String? = response.data?.decode(GithubErrorMessage.self)?.message
+        let bothErrors = [responseError, gitHubError].compactMap { $0 }.joined(separator: " ")
+        
+        return ErrorMessage.getDefaultError(with: bothErrors)
     }
 }
