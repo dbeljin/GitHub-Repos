@@ -17,6 +17,11 @@ class RepoListTableViewModel: RepoListTableViewProtocol {
     private let sectionChecker = TableViewSectionChecker(tableSections: RepoListTableViewSections.self)
     private var repositoryList: [Repository] = []
     private var fetchingWasSuccessful: Bool = false
+
+    
+    // I created one mock example for you to see how it works
+    // replace RepoListNetworking() with MockRepoListNetworking() below
+    // the same approach can be used on another places as well
     
     init(networking: RepoListNetworkingProtocol = RepoListNetworking()) {
         self.networking = networking
