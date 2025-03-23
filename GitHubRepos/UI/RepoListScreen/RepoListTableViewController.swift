@@ -42,6 +42,7 @@ class RepoListTableViewController: UITableViewController {
 }
 
 extension RepoListTableViewController: RepoListUIObserver {
+    
     func setTitle(_ title: String) {
         self.title = title
     }

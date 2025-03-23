@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HeaderTableViewCell: UITableViewCell {
     
@@ -17,9 +18,11 @@ class HeaderTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        avatarImageView.layer.cornerRadius = 15
     }
     
     public func configure(with repo: HeaderCellProtocol) {
+        avatarImageView.kf.setImage(with: URL(string: repo.avatarUrl))
         nameLabel.text = repo.name
         repoNameLabel.text = repo.repoName
         watchersLabel.text = repo.watchersCount
